@@ -6,7 +6,8 @@ export default function Ordreliste({ orders }) {
       <ul style={styles.list}>
         {orders.map((o) => (
           <li key={o.id} style={styles.item}>
-            {o.description}
+            {o.description}<br/>
+            <small>ProduktId: {o.id}</small>
           </li>
         ))}
       </ul>

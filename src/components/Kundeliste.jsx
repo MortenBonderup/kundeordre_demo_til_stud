@@ -1,6 +1,7 @@
 export default function Kundeliste({ customers, selectedCustomerId, onSelectCustomer }) {
   const list = Array.from(customers.values()); // alternativt: const list = [...customers.values()];
 
+
   return (
     <div>
       <h3>Kundeliste</h3>
@@ -15,7 +16,8 @@ export default function Kundeliste({ customers, selectedCustomerId, onSelectCust
             }}
             onClick={() => onSelectCustomer(c.id)}
           >
-            {c.name}
+            {c.name}<br/>
+            <small>KundeId:{c.id}</small>
           </li>
         ))}
       </ul>
